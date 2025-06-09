@@ -23,6 +23,7 @@
 \usepackage{array}
 \usepackage{listings}
 \usepackage{cancel}
+\usepackage{xurl}
 
 \colorlet{LightGray}{White!90!Periwinkle}
 \colorlet{LightOrange}{Orange!15}
@@ -81,6 +82,8 @@
 \newpage
 
 \tableofcontents
+\listoffigures
+\listoftables
 \thispagestyle{empty}
 \newpage
 \setcounter{page}{1}
@@ -89,15 +92,62 @@
 
 Los contenidos de este documento están sacados del documento ``Aplicación para la Solicitud de Recursos Informáticos''\cite{moreno2006aplicacion}
 
+\section{Resumen}
+
 \section{Introducción}
 
 \subsection{Justificación de la actividad}
 
+Durante los últimos años, la participación de la Universidad Jorge Tadeo Lozano en competencias de programación a nivel nacional ha sido limitada y con resultados poco satisfactorios como se presentan en el cuadro \ref{tab:resultados-competencias} donde el mejor resultado es de la competencia del año 2020 quedando de sexta posición. Sin embargo, a lo largo del tiempo la universidad siempre ha tenido unos resultados bajos. Esta situación ha evidenciado una debilidad significativa en la formación de habilidades en programación competitiva entre los estudiantes de la institución, lo cual impacta directamente en la visibilidad y reputación académica.
 
+\begin{table}[h]
+  \centering
+  \begin{tabular}{|c|c|c|}
+    \hline
+    Edición de la competencia& Posición de los equipos de la U& Total de equipos nacional \\ \hline
+    XXXI (2017) & 80 & 120 \\ \hline
+    XXXII (2018) & 74, 75 & 116 \\ \hline
+    XXXIII (2019) & 42, 53, 61, 94 & 119 \\ \hline
+    XXXIV (2020) & 6, 19, & 27 \\ \hline
+    XXXV (2021) & 58, 60 & 83 \\ \hline
+    XXXVI (2022) & 52, 52 & 104 \\ \hline
+    XXXVII (2023) & 61 & 106 \\ \hline
+    XXXVIII (2024) & 75 & 119 \\ \hline
+  \end{tabular}
+  \caption{Clasificación de los diferentes equipos representando a la universidad en las ediciones de la Maratón Nacional de Programación ACIS REDIS\cite{icpc2024,icpc2023,icpc2022,icpc2021,icpc2020,icpc2019,icpc2018}}
+  \label{tab:resultados-competencias}
+\end{table}
+
+
+Debido a esta problemática, desde hace unos meses se ha iniciado la conformación de un Semillero de Programación Competitiva\cite{pcutadeo_github}, con el objetivo de fortalecer las competencias algorítmicas, lógicas y de trabajo en equipo entre los estudiantes interesados en esta área. Sin embargo, dado que el semillero se encuentra en una etapa inicial, es fundamental complementar su desarrollo con actividades que promuevan la práctica constante, el aprendizaje colaborativa, la motivación a través de la competencia y la captura de nuevos talentos entre los estudiantes.
+
+En este contexto, la Maratón de Programación se plantea como una estrategia clave para fomentar el interés en la programación competitiva, identificar talentos emergentes, y preparar de manera más sólida a los estudiantes para futuras participaciones en competencias regionales y nacionales. Además, esta actividad permitirá consolidar el semillero como un espacio activo y retador, capaz de generar una cultura de excelencia técnica y compromiso académico.
+
+La maratón servirá no solo como una experiencia formativa y evaluativa, sino también como un evento integrador que potencie la comunidad académica en torno a la programación, creando las bases para un mejor desempeño institucional en los rankings de competencias tecnológicas en los próximos años.
 
 \subsection{Objetivos}
 
+\subsubsection{General}
+
+Diseñar e implementar una Maratón de Programación interna en la Universidad Jorge Tadeo Lozano como estrategia formativa y competitiva que permita fortalecer el Semillero de Programación Competitiva, mejorar el desempeño institucional en competencias nacionales, y promover una cultura de excelencia técnica entre los estudiantes.
+
+\subsubsection{Específicos}
+
+\begin{itemize}
+  \item Fomentar el interés y la participación estudiantil en actividades de programación competitiva, especialmente entre aquellos que aún no hacen parte del semillero.
+  \item Contribuir a la mejora del rendimiento institucional en futuras competencias, mediante el entrenamiento competitivo y la selección temprana de equipos representativos.
+  \item Simular las condiciones reales de las competencias nacionales, familiarizando a los estudiantes con las dinámicas, el formato y la presión de tiempo propios de eventos como la Maratón Nacional ACIS REDIS.
+  \item Identificar estudiantes con habilidades sobresalientes en lógica, algoritmos y resolución de problemas, para integrarlos y fortalecer la base del semillero.
+\end{itemize}
+
+
 \subsection{Ámbito}
+
+
+
+
+
+
 
 \subsection{Descripción general}
 
