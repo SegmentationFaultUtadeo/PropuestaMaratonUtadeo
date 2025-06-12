@@ -62,6 +62,9 @@
 
 % ------------------------------------------------------------------------------
 
+\setlength{\parskip}{3mm}
+
+
 \begin{document}
 % ------------------------------------------------------------------------------
 % Cover Page and ToC
@@ -80,10 +83,14 @@
 \maketitle
 \thispagestyle{empty}
 \newpage
-
+{
+\setlength{\parskip}{0pt}  % Reset spacing temporarily
 \tableofcontents
 \listoffigures
 \listoftables
+}
+
+
 \thispagestyle{empty}
 \newpage
 \setcounter{page}{1}
