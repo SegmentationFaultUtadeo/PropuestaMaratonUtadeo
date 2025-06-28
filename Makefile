@@ -12,10 +12,10 @@ all: $(MAIN).pdf
 
 
 $(MAIN).pdf: $(MAIN).tex referencias.bib
-	pdflatex $(MAIN)
+	pdflatex --shell-escape $(MAIN)
 	bibtex $(MAIN)
-	pdflatex $(MAIN)
-	pdflatex $(MAIN)
+	pdflatex --shell-escape $(MAIN)
+	pdflatex --shell-escape $(MAIN)
 
 
 clean:

@@ -24,6 +24,7 @@
 \usepackage{listings}
 \usepackage{cancel}
 \usepackage{xurl}
+\usepackage{pdfpages}
 
 \colorlet{LightGray}{White!90!Periwinkle}
 \colorlet{LightOrange}{Orange!15}
@@ -115,7 +116,7 @@ Durante los últimos años, la participación de la Universidad Jorge Tadeo Loza
     XXXI (2017) & 80 & 120 \\ \hline
     XXXII (2018) & 74, 75 & 116 \\ \hline
     XXXIII (2019) & 42, 53, 61, 94 & 119 \\ \hline
-    XXXIV (2020) & 6, 19, & 27 \\ \hline
+    XXXIV (2020) & 6, 19 & 27 \\ \hline
     XXXV (2021) & 58, 60 & 83 \\ \hline
     XXXVI (2022) & 52, 52 & 104 \\ \hline
     XXXVII (2023) & 61 & 106 \\ \hline
@@ -164,7 +165,7 @@ En términos generales, esta actividad se trata de que el semillero de programac
 La fase inicial será de configuración del aplicativo en el servidor de la universidad hecho principalmente por los estudiantes Ludwig Alvarado y Juan José Martínez, miembros del colectivo de sotware libre GNUTADEO. En esta etapa se configura todo el software para que pueda ser llevado el evento; \textit{pullear} las imágenes de Docker\cite{domjudge-judgehost,domjudge-domserver}, configuración del usuario administrador, jurado, equipos, usuarios y \textit{globero}\footnote{Equipo que reparte los globos a los equipos participantes en la competencia que resuelvan problemas}.
 
 
-A la par que se desarrolla la fase de infraestructura, el semillero de programación competitiva a cargo del profesor José Alejandro Franco Calderón prepararán un conjunto de problemas a resolver durante la competición. Estos problemas van a estar divididos de manera general en dos temáticas; técnicos o algorítmicos prácticos, donde se tengan entradas y salidas bien definidas y donde el enfoque es la implementación directa de estructuras de datos y algoritmos clásicos\footnote{Tenga como ejemplo la plataforma \url{www.leetcode.com}\cite{leetcode} en el que los problemas son muy directos, e.j, ``Invierta una lista enlazada''}; competencia algorítmica o de pensamiento lógico-algorítmico, en estos problemas se introduce un componente narrativo o con mucho contexto y se requiere identificar qué estructuras de datos y algoritmos utilizar, los tipos de soluciones deben ser más creativas y estratégicas\footnote{El ICPC es un buen ejemplo de los problemas, otras plataformas pueden ser: \url{https://codeforces.com/}, \url{https://onlinejudge.org/} y \url{https://open.kattis.com/}. }.
+A la par que se desarrolla la fase de infraestructura, el semillero de programación competitiva a cargo del profesor José Alejandro Franco Calderón prepararán un conjunto de problemas a resolver durante la competición. Estos problemas van a estar divididos de manera general en dos temáticas; técnicos o algorítmicos prácticos, donde se tengan entradas y salidas bien definidas y donde el enfoque es la implementación directa de estructuras de datos y algoritmos clásicos\footnote{Tenga como ejemplo la plataforma \url{www.leetcode.com}\cite{leetcode} en el que los problemas son muy directos, e.j, ``Invierta una lista enlazada''}; competencia algorítmica o de pensamiento lógico-algorítmico, en estos problemas se introduce un componente narrativo o con mucho contexto y se requiere identificar qué estructuras de datos y algoritmos utilizar, los tipos de soluciones deben ser más creativas y estratégicas\footnote{El ICPC es un buen ejemplo de los problemas, otras plataformas pueden ser: \url{ https://codeforces.com/ }, \url{https://onlinejudge.org/} y \url{https://open.kattis.com/}. }.
 
 
 Una vez se tengan listos los problemas, se empieza con la fase de divulgación e inscripción. En esta parte se realiza un formulario por medio de Microsoft Forms que esté abierto a toda la comunidad de estudiantes Tadeístas sin importar el semestre ni carrera que esté cursando, aunque el foco principal van a ser estudiantes de la Facultad de Ciencias Naturales e Ingeniería. En el formulario se va a poder elegir el rol que se desea emplear durante la competencia; voluntario de logística, encargado de ayudar con la organización del evento, monitorear que los equipos no se salten las normas y ayudar en cualquier inquietud para estos mismos; por otra parte, se va a tener al participante o competidor, encargado de inscribir el grupo de 3 estudiantes con sus respectivos datos personales (nombres, programa académico y semestre) junto con el nombre del equipo. La divulgación se va a realizar mediante salóneo, grupos de WhatsApp, redes sociales, correo electrónico y con ayuda del voz a voz.
@@ -181,11 +182,17 @@ Por último, se compartirá una encuesta de satisfacción a los participantes pa
 
 \subsection{Metodología y etapas}
 
+
+
+
 \subsection{Planificación de la actividad}
 
 \subsection{Actividad que se ofrece}
 
 \section{Herramientas tecnológicas}
+
+Se va a utilizar como referencia el documento de ``UTADEO - Ficha técnica servidores'' que se encuentra en la sección \ref{sec:anexos} de anexos. Este documento contiene las específicaciones técnicas de los equipos que se encuentran en el laboratorio de redes, el documento (según la \textit{metadata}) es de la fecha 4 de junio de 2025, tener en cuenta que pueden haber actualizaciones debido a las fechas de redacción. Si desea verificar la fecha que se afirma en este documento, puede visitar
+
 
 \subsection{Elementos a considerar}
 
@@ -211,13 +218,36 @@ Por último, se compartirá una encuesta de satisfacción a los participantes pa
 
 \subsection{Modelo entidad-relación}
 
-\subsection{Diseño del formulario}
+\subsection{Diseño de los formularios}
 
 \section{Conclusiones}
 
 \addcontentsline{toc}{section}{Referencias}
 \bibliographystyle{ieeetr}
 \bibliography{referencias}
+
+\newpage
+
+\thispagestyle{empty}
+
+\vspace*{0.3\textwidth}
+
+\begin{figure}[h]
+  \centering
+  \includesvg[width=\textwidth]{Assets/LogoUtadeo.svg}
+\end{figure}
+
+
+
+\newpage
+
+\section{Anexos}
+\label{sec:anexos}
+
+
+\label{doc:ficha-tecnica}
+\includepdf[pages=-]{Bibliografia/FichaTecnica.pdf}
+
 
 
 \end{document}
