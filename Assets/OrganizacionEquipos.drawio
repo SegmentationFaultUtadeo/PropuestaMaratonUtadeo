@@ -85,6 +85,33 @@
         <mxCell id="Wduo-rI9iU1A8Wf9mQqQ-28" value="" style="verticalLabelPosition=bottom;html=1;verticalAlign=top;align=center;strokeColor=none;fillColor=#00BEF2;shape=mxgraph.azure.computer;pointerEvents=1;" vertex="1" parent="1">
           <mxGeometry x="723" y="425" width="50" height="45" as="geometry" />
         </mxCell>
+        <mxCell id="Wduo-rI9iU1A8Wf9mQqQ-29" value="Equipo 1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#00CC66;strokeColor=#6c8ebf;opacity=40;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry y="155" width="254" height="96" as="geometry" />
+        </mxCell>
+        <mxCell id="Wduo-rI9iU1A8Wf9mQqQ-30" value="Equipo 2" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0000FF;strokeColor=#6c8ebf;opacity=40;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="267" y="155" width="254" height="96" as="geometry" />
+        </mxCell>
+        <mxCell id="Wduo-rI9iU1A8Wf9mQqQ-31" value="Equipo 3" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FF3333;strokeColor=#6c8ebf;opacity=40;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="534" y="155" width="254" height="96" as="geometry" />
+        </mxCell>
+        <mxCell id="Wduo-rI9iU1A8Wf9mQqQ-32" value="Equipo 3" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FF3333;strokeColor=#6c8ebf;opacity=40;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry y="280.5" width="254" height="96" as="geometry" />
+        </mxCell>
+        <mxCell id="Wduo-rI9iU1A8Wf9mQqQ-33" value="Equipo 3" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FF3333;strokeColor=#6c8ebf;opacity=40;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="267" y="280.5" width="254" height="96" as="geometry" />
+        </mxCell>
+        <mxCell id="Wduo-rI9iU1A8Wf9mQqQ-34" value="Equipo 3" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FF3333;strokeColor=#6c8ebf;opacity=40;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="537" y="280.5" width="254" height="96" as="geometry" />
+        </mxCell>
+        <mxCell id="Wduo-rI9iU1A8Wf9mQqQ-35" value="Equipo 3" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FF3333;strokeColor=#6c8ebf;opacity=40;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry y="399.5" width="254" height="96" as="geometry" />
+        </mxCell>
+        <mxCell id="Wduo-rI9iU1A8Wf9mQqQ-36" value="Equipo 3" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FF3333;strokeColor=#6c8ebf;opacity=40;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="270" y="399.5" width="254" height="96" as="geometry" />
+        </mxCell>
+        <mxCell id="Wduo-rI9iU1A8Wf9mQqQ-37" value="Equipo 3" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FF3333;strokeColor=#6c8ebf;opacity=40;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="537" y="399.5" width="254" height="96" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
