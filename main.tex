@@ -191,10 +191,25 @@ Por último, se compartirá una encuesta de satisfacción a los participantes pa
 
 \section{Herramientas tecnológicas}
 
-Se va a utilizar como referencia el documento de ``UTADEO - Ficha técnica servidores'' que se encuentra en la sección \ref{sec:anexos} de anexos. Este documento contiene las específicaciones técnicas de los equipos que se encuentran en el laboratorio de redes, el documento (según la \textit{metadata}) es de la fecha 4 de junio de 2025, tener en cuenta que pueden haber actualizaciones debido a las fechas de redacción. Si desea verificar la fecha que se afirma en este documento, puede visitar
+Se va a utilizar como referencia el documento de ``UTADEO - Ficha técnica servidores'' que se encuentra en la sección \ref{sec:anexos} de anexos. Este documento contiene las específicaciones técnicas de los equipos que se encuentran en el laboratorio de redes, el documento (según la \textit{metadata}) es de la fecha 4 de junio de 2025, tener en cuenta que pueden haber actualizaciones debido a las fechas de redacción. Si desea verificar la fecha que se afirma en este documento, puede visitar el repositorio de \textit{GitHub} del documento \href{https://github.com/SegmentationFaultUtadeo/PropuestaMaratonUtadeo/blob/main/Bibliografia/FichaTecnica.pdf}{\textbf{aquí}}, descargar el pdf e inspeccionar la \textit{metadata} del documento (comando \texttt{exiftool}\cite{exiftool}). A su vez, se toma en cuenta los equipos y espacios que cuenta actualmente la universidad.
 
 
 \subsection{Elementos a considerar}
+
+Para los equipos del laboratorio de redes se va realiza la solicitud tomando en cuenta la documentación oficial del aplicativo DOMjudge\cite{domjudge-docs}.
+
+\begin{itemize}
+  \item En primer lugar, se necesita del equipo Hewlett Packard Enterprise STNS 2154 debido a las especificaciones de la máquina y a que cuenta con un sistema operativo Ubuntu Server 20.04. Se requiere de este equipo debido a la participación de múltiples usuarios conectados al mismo tiempo, por lo tanto, el hardware del equipo es perfecto para esto. Además, en la documentación del aplicativo se recomienda tener un equipo GNU/Linux preferiblemente Debian o alguno de sus derivados, en este caso, Ubuntu.
+  \item Para este equipo se requiere de abrir los puertos \(80\) y \(3306\). Esto para permitir el tráfico HTTP y el de la base de datos MariaDB. Según el documento anexo estos puertos se encuentran actualmente cerrados.
+  \item Se va a realizar la instalación (si es necesaria) de los compiladores de los lenguajes de programación; Java 17\cite{oracle-java}, GCC\cite{gcc} (para C/C++) y el interprete de Python\cite{python-downloads}. Estos son los lenguajes que van a estar disponible para los equipos, por lo tanto, se necesita de sus compiladores.
+\end{itemize}
+
+Los computadores que van a utilizar los equipos serán los del módulo 2 y 7A. Para los equipos se requiere:
+
+\begin{itemize}
+  \item Un computador por cada equipo.
+\end{itemize}
+
 
 \section{Análisis de requerimientos}
 
