@@ -201,13 +201,40 @@ Para los equipos del laboratorio de redes se va realiza la solicitud tomando en 
 \begin{itemize}
   \item En primer lugar, se necesita del equipo Hewlett Packard Enterprise STNS 2154 debido a las especificaciones de la máquina y a que cuenta con un sistema operativo Ubuntu Server 20.04. Se requiere de este equipo debido a la participación de múltiples usuarios conectados al mismo tiempo, por lo tanto, el hardware del equipo es perfecto para esto. Además, en la documentación del aplicativo se recomienda tener un equipo GNU/Linux preferiblemente Debian o alguno de sus derivados, en este caso, Ubuntu.
   \item Para este equipo se requiere de abrir los puertos \(80\) y \(3306\). Esto para permitir el tráfico HTTP y el de la base de datos MariaDB. Según el documento anexo estos puertos se encuentran actualmente cerrados.
-  \item Se va a realizar la instalación (si es necesaria) de los compiladores de los lenguajes de programación; Java 17\cite{oracle-java}, GCC\cite{gcc} (para C/C++) y el interprete de Python\cite{python-downloads}. Estos son los lenguajes que van a estar disponible para los equipos, por lo tanto, se necesita de sus compiladores.
+  \item Se va a realizar la instalación (si es necesaria) de los compiladores de los lenguajes de programación; Java 17\cite{oracle-java} o 21, GCC\cite{gcc} (para C/C++) y el interprete de Python\cite{python-downloads}. Estos son los lenguajes que van a estar disponible para los equipos, por lo tanto, se necesita de sus compiladores.
 \end{itemize}
 
 Los computadores que van a utilizar los equipos serán los del módulo 2 y 7A. Para los equipos se requiere:
 
 \begin{itemize}
-  \item Un computador por cada equipo.
+  \item Los equipos deben organizarse de una manera similar a la que se encuentra en la figura \ref{fig:sala-equipos}, cada equipo va a estar al frente de 3 computadores de los cuales únicamente el del medio debe estar prendido, los otros deben permanecer apagados durante la competencia. Si por algún motivo, el computador asignado no funciona, entonces se puede cambiar a los otros dos disponibles. Los voluntarios que ayuden a la organización del evento se encargarán de vigilar que solo se utilice uno de los computadores por equipo, de lo contrario, los estudiantes participantes serán descalificados.
+
+        \begin{figure}[h]
+          \centering
+          \includegraphics[width=\textwidth]{Assets/Equipos.png}
+          \caption{Ejemplo de la organización de equipos en un salón de cómputo }
+          \label{fig:sala-equipos}
+        \end{figure}
+  \item Tener los lenguajes de programación: Java 17 o 21, C/C++ compilador GCC versión 13.2, Python versión \(>=\) 3.9.
+  \item IDEs:
+        \begin{itemize}
+          \item Eclipse versión 4.33.0 configurado con:
+                \begin{itemize}
+                  \item Java Development Tooling JDT versión 3.19.600.v20240903-0240 y que use el Java que está listado arriba.
+                  \item C++ Development Tooling CDT versión 11.0.0 usando C++ mencionado arriba.
+                  \item PyDev Python Development Tooling version 10.0.2 usando Python3 listado arriba.
+                \end{itemize}
+          \item IntelliJ IDEA community versión 2024.2.3 configurado con Java como se lista arriba.
+          \item CLion versión 2024.2.2 con GCC listado arriba.
+          \item Pycharm community versión 2024.2.3 configurado con Python3 listado arriba.
+          \item VS Code versión 1.93.1 configurado únicamente con Python3 y C/C++ listado arriba.
+        \end{itemize}
+  \item Cualquiera de los siguientes navegadores web:
+        \begin{itemize}
+          \item Firefox.
+          \item Google Chrome.
+          \item Microsoft Edge.
+        \end{itemize}
 \end{itemize}
 
 
