@@ -52,12 +52,12 @@
 
 \setstretch{1.2}
 \geometry{
-    textheight=9in,
-    textwidth=5.5in,
-    top=1in,
-    headheight=12pt,
-    headsep=25pt,
-    footskip=30pt
+  textheight=9in,
+  textwidth=5.5in,
+  top=1in,
+  headheight=12pt,
+  headsep=25pt,
+  footskip=30pt
 }
 
 
@@ -75,7 +75,7 @@
 	\\ [2.0cm]
 	\HRule{1.5pt} \\
 	\LARGE \textbf{\uppercase{Propuesta Maratón de Programación UTADEO}
-		\HRule{2.0pt} \\ [0.6cm] \Large{Sementation Fault, Semillero de Programación Competitiva\\Y\\ GNUTADEO, Colectivo de Software Libre} \vspace*{10\baselineskip}}
+		\HRule{2.0pt} \\ [0.6cm] \Large{Sementation Fault, Semillero de Programación Competitiva\\Y\\ GNUTADEO, Colectivo de Sofntware Libre} \vspace*{10\baselineskip}}
 }
 \date{}
 \author{\textbf{Alvarado Becerra Ludwig} \\
@@ -85,10 +85,10 @@
 \thispagestyle{empty}
 \newpage
 {
-\setlength{\parskip}{0pt}  % Reset spacing temporarily
-\tableofcontents
-\listoffigures
-\listoftables
+  \setlength{\parskip}{0pt}  % Reset spacing temporarily
+  \tableofcontents
+  \listoffigures
+  \listoftables
 }
 
 
@@ -182,7 +182,71 @@ Por último, se compartirá una encuesta de satisfacción a los participantes pa
 
 \subsection{Metodología y etapas}
 
+La Maratón de Programación será implementada mediante una metodología participativa, técnica y pedagógica. El proceso se estructura en seis etapas fundamentales descritas a continuación y mostradas en orden temporal de acuerdo a la figura (\textbf{pendiente por hacer})
 
+\subsubsection{Preparación técnica e infraestructura}
+
+Esta etapa tiene como objetivo adecuar el entorno tecnológico necesario para la competencia. Se realizará la instalación y configuración de la plataforma \textit{DOMjudge}, empleada en competencias oficiales del ICPC. Este proceso incluye:
+
+\begin{itemize}
+  \item Configuración de contenedores \textit{Docker} para el servidor (\textit{domserver}) y los nodos de evaluación (\textit{judgehosts})\cite{domjudge-domserver,domjudge-judgehost}.
+  \item Creación y gestión de usuarios para jurado, participantes, globeros y administradores.
+  \item Pruebas de conectividad, rendimiento y funcionalidad en el laboratorio de redes.
+\end{itemize}
+
+Esta etapa será desarrollada por los estudiantes Ludwig Alvarado y Juan José Martínez, miembros activos de GNUTADEO.
+
+\subsubsection{Diseño del conjunto de problemas}
+
+El semillero, liderado por el profesor José Alejandro Franco Calderón, diseñará el conjunto de problemas que serán propuestos durante la competencia. Los problemas estarán organizados en dos categorías:
+
+\begin{itemize}
+  \item \textbf{Técnicos o prácticos}: centrados en la implementación directa de estructuras de datos y algoritmos clásicos (como los disponibles en plataformas como \textit{LeetCode}\cite{leetcode}).
+  \item \textbf{Algorítmicos o de pensamiento lógico-estratégico}: de mayor complejidad conceptual, con contexto narrativo y enfoque en resolución creativa, similares a los usados en competencias como ICPC o plataformas como \textit{Codeforces}, \textit{Kattis} y \textit{Online Judge}.
+\end{itemize}
+
+\subsubsection{Convocatoria y divulgación}
+
+Una vez consolidada la base técnica y académica del evento, se abrirá una convocatoria para la comunidad estudiantil. Se habilitará un formulario de inscripción en Microsoft Forms, donde los interesados podrán elegir su rol:
+
+\begin{itemize}
+  \item \textbf{Participantes}: equipos de 3 estudiantes que competirán en la maratón.
+  \item \textbf{Voluntarios}: encargados de logística, monitoreo y apoyo organizativo.
+\end{itemize}
+
+La divulgación se realizará por canales internos como saloneo, correo institucional, redes sociales, grupos de WhatsApp y voz a voz. Aunque el evento es abierto a toda la universidad, se dará especial énfasis a estudiantes de la Facultad de Ciencias Naturales e Ingeniería.
+
+
+\subsubsection{Ejecución de la maratón}
+La competencia se llevará a cabo el \textbf{sábado 26 de julio de 2025}, durante un bloque de 6 horas:
+
+\begin{itemize}
+  \item 13:00–13:30 — Explicación de reglas y funcionamiento del sistema.
+  \item 13:30–18:00 — Competencia oficial (4.5 horas).
+  \item 18:00–19:00 — Premiación, resultados y cierre.
+\end{itemize}
+
+Todos los equipos estarán previamente registrados en la plataforma DOMjudge. El evento contará con globeros, jurado, organizadores y personal de apoyo para garantizar el cumplimiento de las reglas y el buen desarrollo de la jornada.
+
+\subsubsection{Análisis de resultados}
+
+
+Al finalizar la competencia, se generarán estadísticas automáticas desde DOMjudge que serán compartidas con profesores del área de Industrias y Tecnologías Digitales. Entre los indicadores se incluyen:
+
+\begin{itemize}
+  \item Número de envíos y de envíos correctos.
+  \item Problemas intentados y resueltos por equipo.
+  \item Lenguajes de programación utilizados.
+  \item Tiempos de resolución y tasas de éxito.
+\end{itemize}
+
+Esta información será clave para identificar patrones de dificultad, ajustar contenidos curriculares y reforzar áreas débiles en la formación académica.
+
+\subsubsection{Retroalimentación y proyección}
+
+Como etapa final, se aplicará una encuesta de satisfacción a todos los participantes. Los estudiantes que demuestren un alto rendimiento serán invitados a integrar el Semillero de Programación Competitiva “Segmentation Fault”, con el objetivo de fortalecer los equipos institucionales de cara a futuras competencias locales, regionales, nacionales e internacionales.
+
+Este seguimiento no solo busca mejorar futuras ediciones del evento, sino también consolidar una cultura de mejora continua, excelencia académica y pertenencia institucional.
 
 
 \subsection{Planificación de la actividad}
@@ -238,6 +302,11 @@ Los computadores que van a utilizar los equipos serán los del módulo 2 y 7A. P
 \end{itemize}
 
 
+Los equipos estarán vigilados por una o varias personas que se encuentren en la sala de cómputo, esto con el fin de asegurarse que no utilicen ayuda externa; celulares, internet, LLMs, entre otras herramientas que no sean las que se listaron anteriormente.
+
+Por último, se desea poder crear una red sin salida a internet en la que se puedan conectar los computadores y se pueda exponer la dirección en la que está desplegada el aplicativo DOMjudge.
+
+
 \section{Análisis de requerimientos}
 
 \subsection{Flujo de trabajo general}
@@ -268,16 +337,6 @@ Los computadores que van a utilizar los equipos serán los del módulo 2 y 7A. P
 \bibliographystyle{ieeetr}
 \bibliography{referencias}
 
-\newpage
-
-\thispagestyle{empty}
-
-\vspace*{0.3\textwidth}
-
-\begin{figure}[h]
-  \centering
-  \includesvg[width=\textwidth]{Assets/LogoUtadeo.svg}
-\end{figure}
 
 
 
@@ -291,5 +350,15 @@ Los computadores que van a utilizar los equipos serán los del módulo 2 y 7A. P
 \includepdf[pages=-]{Bibliografia/FichaTecnica.pdf}
 
 
+\newpage
+
+\thispagestyle{empty}
+
+\vspace*{0.3\textwidth}
+
+\begin{figure}[h]
+  \centering
+  \includesvg[width=\textwidth]{Assets/LogoUtadeo.svg}
+\end{figure}
 
 \end{document}
