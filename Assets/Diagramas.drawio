@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64; rv:138.0) Gecko/20100101 Firefox/138.0" version="27.1.6">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64; rv:138.0) Gecko/20100101 Firefox/138.0" version="27.2.0">
   <diagram name="Page-1" id="hFxnkWMH6C80C6UsPF_a">
-    <mxGraphModel dx="934" dy="619" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1173" dy="591" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -111,6 +111,9 @@
         </mxCell>
         <mxCell id="Wduo-rI9iU1A8Wf9mQqQ-37" value="Equipo 9" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#7F00FF;strokeColor=#6c8ebf;opacity=40;verticalAlign=top;" parent="1" vertex="1">
           <mxGeometry x="537" y="399.5" width="254" height="96" as="geometry" />
+        </mxCell>
+        <mxCell id="FYHPF-Zyeq2GO6crJtSw-1" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry y="643" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
