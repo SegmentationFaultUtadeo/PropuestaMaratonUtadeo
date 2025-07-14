@@ -25,6 +25,8 @@
 \usepackage{cancel}
 \usepackage{xurl}
 \usepackage{pdfpages}
+\usepackage{pgfgantt}
+\usepackage{enumitem}
 
 \colorlet{LightGray}{White!90!Periwinkle}
 \colorlet{LightOrange}{Orange!15}
@@ -75,7 +77,7 @@
 	\\ [2.0cm]
 	\HRule{1.5pt} \\
 	\LARGE \textbf{\uppercase{Propuesta Maratón de Programación UTADEO}
-		\HRule{2.0pt} \\ [0.6cm] \Large{Sementation Fault, Semillero de Programación Competitiva\\Y\\ GNUTADEO, Colectivo de Sofntware Libre} \vspace*{10\baselineskip}}
+		\HRule{2.0pt} \\ [0.6cm] \Large{Sementation Fault, Semillero de Programación Competitiva\\Y\\ GNUTADEO, Colectivo de Software Libre} \vspace*{10\baselineskip}}
 }
 \date{}
 \author{\textbf{Alvarado Becerra Ludwig} \\
@@ -171,7 +173,8 @@ A la par que se desarrolla la fase de infraestructura, el semillero de programac
 Una vez se tengan listos los problemas, se empieza con la fase de divulgación e inscripción. En esta parte se realiza un formulario por medio de Microsoft Forms que esté abierto a toda la comunidad de estudiantes Tadeístas sin importar el semestre ni carrera que esté cursando, aunque el foco principal van a ser estudiantes de la Facultad de Ciencias Naturales e Ingeniería. En el formulario se va a poder elegir el rol que se desea emplear durante la competencia; voluntario de logística, encargado de ayudar con la organización del evento, monitorear que los equipos no se salten las normas y ayudar en cualquier inquietud para estos mismos; por otra parte, se va a tener al participante o competidor, encargado de inscribir el grupo de 3 estudiantes con sus respectivos datos personales (nombres, programa académico y semestre) junto con el nombre del equipo. La divulgación se va a realizar mediante salóneo, grupos de WhatsApp, redes sociales, correo electrónico y con ayuda del voz a voz.
 
 
-Ya una vez se tenga todo listo, la competencia empieza el sábado de la primera semana del semestre 2025-2S, es decir, el día 26 de julio\cite{utadeo_calendario} a las trece horas hasta las diecinueve horas del día, en total 6 horas de competencia, la primera media hora va a ser para que los participantes entiendan la metodología que se va a manejar durante la competencia, las siguientes cuatro horas y media serán de competencia, por último, la media hora restante será para los ganadores y mostrar los resultados. Para el inicio de la competencia ya se deben tener los equipos registrados en el aplicativo y disponer de los equipos a utilizar por los competidores listos para ser usados por los equipos.
+Ya una vez se tenga todo listo, la competencia empieza (\textbf{colocar posible fecha})%el sábado de la primera semana del semestre 2025-2S, es decir, el día 26 de julio\cite{utadeo_calendario}
+ a las trece horas hasta las diecinueve horas del día, en total 6 horas de competencia, la primera media hora va a ser para que los participantes entiendan la metodología que se va a manejar durante la competencia, las siguientes cuatro horas y media serán de competencia, por último, la media hora restante será para los ganadores y mostrar los resultados. Para el inicio de la competencia ya se deben tener los equipos registrados en el aplicativo y disponer de los equipos a utilizar por los competidores listos para ser usados por los equipos.
 
 
 Una vez finalizada toda la jornada de la competencia, se compartirán los resultados con profesores del área de Industrias y Tecnologías Digitales. Las estadísticas serán tanto de la competencia general, como de los equipos individuales, se compartirán; número total de envíos, envíos aceptados, problemas intentados/resueltos, equipos que intentaron/resolvieron cada problema, contador de envíos, uso de lenguajes de programación, porcentaje de envíos correctos, entre otros. Esto será de gran utilidad para identificar en qué problemas son los que más presentan dificultades los alumnos, al compartirse con los profesores ellos pueden ajustar las metodologías y actividades de la clase para poner cubrir estos huecos en los estudiantes.
@@ -196,7 +199,7 @@ Esta etapa tiene como objetivo adecuar el entorno tecnológico necesario para la
 
 Esta etapa será desarrollada por los estudiantes Ludwig Alvarado y Juan José Martínez, miembros activos de GNUTADEO.
 
-\subsubsection{Diseño del conjunto de problemas}
+\subsubsection{Elaboración del conjunto de problemas}
 
 El semillero, liderado por el profesor José Alejandro Franco Calderón, diseñará el conjunto de problemas que serán propuestos durante la competencia. Los problemas estarán organizados en dos categorías:
 
@@ -218,7 +221,7 @@ La divulgación se realizará por canales internos como saloneo, correo instituc
 
 
 \subsubsection{Ejecución de la maratón}
-La competencia se llevará a cabo el \textbf{sábado 26 de julio de 2025}, durante un bloque de 6 horas:
+La competencia se llevará a cabo el (\textbf{cuadrar fecha}), durante un bloque de 6 horas:
 
 \begin{itemize}
   \item 13:00–13:30 — Explicación de reglas y funcionamiento del sistema.
@@ -251,11 +254,42 @@ Este seguimiento no solo busca mejorar futuras ediciones del evento, sino tambi�
 
 \subsection{Planificación de la actividad}
 
+
+En la figura \ref{dia:GANTT} se muestra mediante un diagrama de GANTT las etapas de manera general para llevar a cabo la maratón. Se muestran los grupos de trabajo que se van a encargar para cada tarea y cuántos días se van a demorar. Todo el proceso tarda 16 días, siendo la mayor parte para la convocatoria y la elaboración de los problemas.
+
+Si hay posibilidad de poder volver a repetir el evento, la etapa de \textbf{Elaboración Conjunto de Problemas} puede realizarse mucho antes del inicio del evento.
+
+
+\begin{landscape}
+  \begin{figure}
+    \begin{ganttchart}[expand chart = \linewidth, vgrid, hgrid]{1}{16}
+      \gantttitle{Días}{16} \\
+      \gantttitlelist{1,...,16}{1} \\
+      \ganttgroup{GNUTADEO}{1}{3} \\
+      \ganttbar{Preparación de Infraestructura}{1}{3} \\
+      \ganttgroup{Segmentation Fault}{4}{11} \\
+      \ganttbar{Elaboración Conjunto de Problemas}{4}{11} \\
+      \ganttgroup{Ludwig Alvarado y Voluntarios}{4}{12} \\
+      \ganttbar{Convocatoria y Divulgación}{4}{12} \\
+      \ganttgroup{GNUTADEO}{13}{13} \\
+      \ganttbar{Actualización Plataforma DOMjudge}{13}{13} \\
+      \ganttgroup{Ludwig Alvarado y Voluntarios}{14}{16}\\
+      \ganttbar{Maratón}{14}{14} \\
+      \ganttbar{Análisis de Resultados}{15}{16}
+    \end{ganttchart}
+    \caption{Diagrama de GANTT para la Maratón de Programación Tadeísta}
+    \label{dia:GANTT}
+  \end{figure}
+\end{landscape}
+
+
 \subsection{Actividad que se ofrece}
+
+La actividad que se termina ofreciendo es una maratón de programación competitiva para Tadeístas. Se despliega con infraestructura de la universidad y con el aplicativo DOMjudge. Se cubre todo el desarrollo de la actividad; despliegue, elaboración de problemas, divulgación, convocatoria, y análisis de resultados. En el presente documento se muestra la propuesta completa para poder realizar esta actividad y también que pueda ser llevada como un evento semestral Tadeísta.
 
 \section{Herramientas tecnológicas}
 
-Se va a utilizar como referencia el documento de ``UTADEO - Ficha técnica servidores'' que se encuentra en la sección \ref{sec:anexos} de anexos. Este documento contiene las específicaciones técnicas de los equipos que se encuentran en el laboratorio de redes, el documento (según la \textit{metadata}) es de la fecha 4 de junio de 2025, tener en cuenta que pueden haber actualizaciones debido a las fechas de redacción. Si desea verificar la fecha que se afirma en este documento, puede visitar el repositorio de \textit{GitHub} del documento \href{https://github.com/SegmentationFaultUtadeo/PropuestaMaratonUtadeo/blob/main/Bibliografia/FichaTecnica.pdf}{\textbf{aquí}}, descargar el pdf e inspeccionar la \textit{metadata} del documento (comando \texttt{exiftool}\cite{exiftool}). A su vez, se toma en cuenta los equipos y espacios que cuenta actualmente la universidad.
+Se va a utilizar como referencia el documento de ``UTADEO - Ficha técnica servidores'' que se encuentra en la sección \ref{sec:anexos} de anexos. Este documento contiene las específicaciones técnicas de los equipos que se encuentran en el laboratorio de redes, el documento (según la \textit{metadata}) es de la fecha 4 de junio de 2025, tener en cuenta que pueden haber actualizaciones debido a las fechas de redacción.\footnote{ Si desea verificar la fecha que se afirma en este documento, puede visitar el repositorio de \textit{GitHub} del documento \href{https://github.com/SegmentationFaultUtadeo/PropuestaMaratonUtadeo/blob/main/Bibliografia/FichaTecnica.pdf}{\textbf{aquí}}, descargar el pdf e inspeccionar la \textit{metadata} del documento (comando \texttt{exiftool}\cite{exiftool}).} A su vez, se toma en cuenta los equipos y espacios que cuenta actualmente la universidad.
 
 
 \subsection{Elementos a considerar}
@@ -311,7 +345,64 @@ Por último, se desea poder crear una red sin salida a internet en la que se pue
 
 \subsection{Flujo de trabajo general}
 
+
 \subsection{Inscripción a la competencia}
+
+La inscripción va a ser para los voluntarios como para los equipos. En el caso de las personas que quieran ser ayudantes del evento, se diligencia un formulario individual. Para el caso de la inscripción de equipos se llenará un solo formulario por grupo.\footnote{ Se recomienda utilizar una instancia local de LimeSurvey\cite{limesurvey} para tener dominio de los datos y no depender de servicios de terceros.}
+
+Los campos mínimos necesarios a incluir en la inscripción de los equipos son:
+
+\begin{itemize}
+  \item \textbf{Nombre del equipo:} Título que llevará el equipo en la competencia. Sin lenguaje ofensivo o inadecuado.
+  \item \textbf{Información de cada integrante (x3):}
+        \begin{itemize}
+          \item \textbf{Nombre completo:} Nombres y apellidos.
+          \item \textbf{Correo institucional:} Con dirección \texttt{@utadeo.edu.co}
+          \item \textbf{Tipo de documento:} T.I, C.C, Pasaporte.
+          \item \textbf{Número de documento:} NUIP del estudiante.
+          \item \textbf{Programa académico:} Carrera de pregrado que está cursando el estudiante. Si es estudiante de doble carrera colocar la principal.
+          \item \textbf{Semestre actual:} Semestre en el que se encuentra matriculado el estudiante.
+          \item \textbf{¿Ha participado en competencias de programación competitiva?} Pregunta de sí o no.
+        \end{itemize}
+  \item \textbf{Comentarios adicionales:} Dudas, sugerencias o solicitudes del equipo.
+  \item \textbf{Aceptación de términos y condiciones:} Pregunta de sí o no. Adjuntar las reglas de la competencia, uso de datos personales, comportamiento adecuado, etc.
+\end{itemize}
+
+
+Para aquellos individuos interesados en ser parte del equipo de voluntariado se deben llenar estos campos mínimos:
+
+\begin{itemize}
+  \item \textbf{Nombre completo:} Nombres y apellidos.
+  \item \textbf{Correo electrónico:} Puede ser de cualquier dominio sin importar si es directamente afiliado a la universidad.
+  \item \textbf{Número de contacto:} Número de celular, WhatsApp o cualquier otra red que sea de fácil interacción con el interesado.
+  \item \textbf{¿Qué vínculo posee con la Universidad Jorge Tadeo Lozano?}
+        \begin{itemize}[label=$\square$]
+          \item  Estudiante actual.
+          \item  Egresado/a.
+          \item  Docente / Administrativo.
+          \item  Externo/a.
+          \item  Otro (especificar).
+        \end{itemize}
+  \item \textbf{Disponibilidad para (fecha del evento):} El interesado deberá marcar si está disponible para esa fecha o si puede durante un período de tiempo.
+  \item \textbf{Confirmación para una reunión de inducción (virtual o presencial):} El interesado debe marcar si puede participar en un encuentro para explicar qué funciones se van a llevar durante el evento y para repartir roles.
+  \item \textbf{Funciones que le gustaría colaborar:} Se pueden marcar más de una
+        \begin{itemize}[label=$\square$]
+          \item Registro de participantes.
+          \item Apoyo logístico general (sillas, señalización, ubicaciones).
+          \item Monitoreo de salas durante la competencia.
+          \item Soporte técnico básico (conectividad, hardware).
+          \item Glober@ (entregar globos a los equipos que resuelvan problemas).
+          \item Cualquiera, donde se necesite.
+        \end{itemize}
+  \item \textbf{Compromiso:} El interesado acepta participar como voluntario y se compromete a cumplir con las tareas asignadas.
+  \item \textbf{Comentarios adicionales:} Dudas, sugerencias o solicitudes del interesado.
+\end{itemize}
+
+
+Los formularios deben estar en todo momento cuando se esté en la fase de convocatoria y divulgación. Preferiblemente crear un grupo con todos los voluntarios para facilitar la comunicación entre todos los interesados.
+
+
+
 
 \subsection{Aceptación de equipos}
 
@@ -336,9 +427,6 @@ Por último, se desea poder crear una red sin salida a internet en la que se pue
 \addcontentsline{toc}{section}{Referencias}
 \bibliographystyle{ieeetr}
 \bibliography{referencias}
-
-
-
 
 \newpage
 
