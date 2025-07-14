@@ -25,6 +25,7 @@
 \usepackage{cancel}
 \usepackage{xurl}
 \usepackage{pdfpages}
+\usepackage{pgfgantt}
 
 \colorlet{LightGray}{White!90!Periwinkle}
 \colorlet{LightOrange}{Orange!15}
@@ -171,7 +172,8 @@ A la par que se desarrolla la fase de infraestructura, el semillero de programac
 Una vez se tengan listos los problemas, se empieza con la fase de divulgación e inscripción. En esta parte se realiza un formulario por medio de Microsoft Forms que esté abierto a toda la comunidad de estudiantes Tadeístas sin importar el semestre ni carrera que esté cursando, aunque el foco principal van a ser estudiantes de la Facultad de Ciencias Naturales e Ingeniería. En el formulario se va a poder elegir el rol que se desea emplear durante la competencia; voluntario de logística, encargado de ayudar con la organización del evento, monitorear que los equipos no se salten las normas y ayudar en cualquier inquietud para estos mismos; por otra parte, se va a tener al participante o competidor, encargado de inscribir el grupo de 3 estudiantes con sus respectivos datos personales (nombres, programa académico y semestre) junto con el nombre del equipo. La divulgación se va a realizar mediante salóneo, grupos de WhatsApp, redes sociales, correo electrónico y con ayuda del voz a voz.
 
 
-Ya una vez se tenga todo listo, la competencia empieza el sábado de la primera semana del semestre 2025-2S, es decir, el día 26 de julio\cite{utadeo_calendario} a las trece horas hasta las diecinueve horas del día, en total 6 horas de competencia, la primera media hora va a ser para que los participantes entiendan la metodología que se va a manejar durante la competencia, las siguientes cuatro horas y media serán de competencia, por último, la media hora restante será para los ganadores y mostrar los resultados. Para el inicio de la competencia ya se deben tener los equipos registrados en el aplicativo y disponer de los equipos a utilizar por los competidores listos para ser usados por los equipos.
+Ya una vez se tenga todo listo, la competencia empieza (\textbf{colocar posible fecha})%el sábado de la primera semana del semestre 2025-2S, es decir, el día 26 de julio\cite{utadeo_calendario}
+ a las trece horas hasta las diecinueve horas del día, en total 6 horas de competencia, la primera media hora va a ser para que los participantes entiendan la metodología que se va a manejar durante la competencia, las siguientes cuatro horas y media serán de competencia, por último, la media hora restante será para los ganadores y mostrar los resultados. Para el inicio de la competencia ya se deben tener los equipos registrados en el aplicativo y disponer de los equipos a utilizar por los competidores listos para ser usados por los equipos.
 
 
 Una vez finalizada toda la jornada de la competencia, se compartirán los resultados con profesores del área de Industrias y Tecnologías Digitales. Las estadísticas serán tanto de la competencia general, como de los equipos individuales, se compartirán; número total de envíos, envíos aceptados, problemas intentados/resueltos, equipos que intentaron/resolvieron cada problema, contador de envíos, uso de lenguajes de programación, porcentaje de envíos correctos, entre otros. Esto será de gran utilidad para identificar en qué problemas son los que más presentan dificultades los alumnos, al compartirse con los profesores ellos pueden ajustar las metodologías y actividades de la clase para poner cubrir estos huecos en los estudiantes.
@@ -196,7 +198,7 @@ Esta etapa tiene como objetivo adecuar el entorno tecnológico necesario para la
 
 Esta etapa será desarrollada por los estudiantes Ludwig Alvarado y Juan José Martínez, miembros activos de GNUTADEO.
 
-\subsubsection{Diseño del conjunto de problemas}
+\subsubsection{Elaboración del conjunto de problemas}
 
 El semillero, liderado por el profesor José Alejandro Franco Calderón, diseñará el conjunto de problemas que serán propuestos durante la competencia. Los problemas estarán organizados en dos categorías:
 
@@ -218,7 +220,7 @@ La divulgación se realizará por canales internos como saloneo, correo instituc
 
 
 \subsubsection{Ejecución de la maratón}
-La competencia se llevará a cabo el \textbf{sábado 26 de julio de 2025}, durante un bloque de 6 horas:
+La competencia se llevará a cabo el (\textbf{cuadrar fecha}), durante un bloque de 6 horas:
 
 \begin{itemize}
   \item 13:00–13:30 — Explicación de reglas y funcionamiento del sistema.
@@ -251,67 +253,41 @@ Este seguimiento no solo busca mejorar futuras ediciones del evento, sino tambi�
 
 \subsection{Planificación de la actividad}
 
+
+En la figura \ref{dia:GANTT} se muestra mediante un diagrama de GANTT las etapas de manera general para llevar a cabo la maratón. Se muestran los grupos de trabajo que se van a encargar para cada tarea y cuántos días se van a demorar. Todo el proceso tarda 16 días, siendo la mayor parte para la convocatoria y la elaboración de los problemas.
+
+Si hay posibilidad de poder volver a repetir el evento, la etapa de \textbf{Elaboración Conjunto de Problemas} puede realizarse mucho antes del inicio del evento.
+
+
+\begin{landscape}
+  \begin{figure}
+    \begin{ganttchart}[expand chart = \linewidth, vgrid, hgrid]{1}{16}
+      \gantttitle{Días}{16} \\
+      \gantttitlelist{1,...,16}{1} \\
+      \ganttgroup{GNUTADEO}{1}{3} \\
+      \ganttbar{Preparación de Infraestructura}{1}{3} \\
+      \ganttgroup{Segmentation Fault}{4}{11} \\
+      \ganttbar{Elaboración Conjunto de Problemas}{4}{11} \\
+      \ganttgroup{Ludwig Alvarado y Voluntarios}{4}{12} \\
+      \ganttbar{Convocatoria y Divulgación}{4}{12} \\
+      \ganttgroup{GNUTADEO}{13}{13} \\
+      \ganttbar{Actualización Plataforma DOMjudge}{13}{13} \\
+      \ganttgroup{Ludwig Alvarado y Voluntarios}{14}{16}\\
+      \ganttbar{Maratón}{14}{14} \\
+      \ganttbar{Análisis de Resultados}{15}{16}
+    \end{ganttchart}
+    \caption{Diagrama de GANTT para la Maratón de Programación Tadeísta}
+    \label{dia:GANTT}
+  \end{figure}
+\end{landscape}
+
+
 \subsection{Actividad que se ofrece}
+
+La actividad que se termina ofreciendo es una maratón de programación competitiva para Tadeístas. Se despliega con infraestructura de la universidad y con el aplicativo DOMjudge. Se cubre todo el desarrollo de la actividad; despliegue, elaboración de problemas, divulgación, convocatoria, y análisis de resultados. En el presente documento se muestra la propuesta completa para poder realizar esta actividad y también que pueda ser llevada como un evento semestral Tadeísta.
 
 \section{Herramientas tecnológicas}
 
-Se va a utilizar como referencia el documento de ``UTADEO - Ficha técnica servidores'' que se encuentra en la sección \ref{sec:anexos} de anexos. Este documento contiene las específicaciones técnicas de los equipos que se encuentran en el laboratorio de redes, el documento (según la \textit{metadata}) es de la fecha 4 de junio de 2025, tener en cuenta que pueden haber actualizaciones debido a las fechas de redacción. Si desea verificar la fecha que se afirma en este documento, puede visitar el repositorio de \textit{GitHub} del documento \href{https://github.com/SegmentationFaultUtadeo/PropuestaMaratonUtadeo/blob/main/Bibliografia/FichaTecnica.pdf}{\textbf{aquí}}, descargar el pdf e inspeccionar la \textit{metadata} del documento (comando \texttt{exiftool}\cite{exiftool}). A su vez, se toma en cuenta los equipos y espacios que cuenta actualmente la universidad.
-
-
-\subsection{Elementos a considerar}
-
-Para los equipos del laboratorio de redes se va realiza la solicitud tomando en cuenta la documentación oficial del aplicativo DOMjudge\cite{domjudge-docs}.
-
-\begin{itemize}
-  \item En primer lugar, se necesita del equipo Hewlett Packard Enterprise STNS 2154 debido a las especificaciones de la máquina y a que cuenta con un sistema operativo Ubuntu Server 20.04. Se requiere de este equipo debido a la participación de múltiples usuarios conectados al mismo tiempo, por lo tanto, el hardware del equipo es perfecto para esto. Además, en la documentación del aplicativo se recomienda tener un equipo GNU/Linux preferiblemente Debian o alguno de sus derivados, en este caso, Ubuntu.
-  \item Para este equipo se requiere de abrir los puertos \(80\) y \(3306\). Esto para permitir el tráfico HTTP y el de la base de datos MariaDB. Según el documento anexo estos puertos se encuentran actualmente cerrados.
-  \item Se va a realizar la instalación (si es necesaria) de los compiladores de los lenguajes de programación; Java 17\cite{oracle-java} o 21, GCC\cite{gcc} (para C/C++) y el interprete de Python\cite{python-downloads}. Estos son los lenguajes que van a estar disponible para los equipos, por lo tanto, se necesita de sus compiladores.
-\end{itemize}
-
-Los computadores que van a utilizar los equipos serán los del módulo 2 y 7A. Para los equipos se requiere:
-
-\begin{itemize}
-  \item Los equipos deben organizarse de una manera similar a la que se encuentra en la figura \ref{fig:sala-equipos}, cada equipo va a estar al frente de 3 computadores de los cuales únicamente el del medio debe estar prendido, los otros deben permanecer apagados durante la competencia. Si por algún motivo, el computador asignado no funciona, entonces se puede cambiar a los otros dos disponibles. Los voluntarios que ayuden a la organización del evento se encargarán de vigilar que solo se utilice uno de los computadores por equipo, de lo contrario, los estudiantes participantes serán descalificados.
-
-        \begin{figure}[h]
-          \centering
-          \includegraphics[width=\textwidth]{Assets/Equipos.png}
-          \caption{Ejemplo de la organización de equipos en un salón de cómputo }
-          \label{fig:sala-equipos}
-        \end{figure}
-  \item Tener los lenguajes de programación: Java 17 o 21, C/C++ compilador GCC versión 13.2, Python versión \(>=\) 3.9.
-  \item IDEs:
-        \begin{itemize}
-          \item Eclipse versión 4.33.0 configurado con:
-                \begin{itemize}
-                  \item Java Development Tooling JDT versión 3.19.600.v20240903-0240 y que use el Java que está listado arriba.
-                  \item C++ Development Tooling CDT versión 11.0.0 usando C++ mencionado arriba.
-                  \item PyDev Python Development Tooling version 10.0.2 usando Python3 listado arriba.
-                \end{itemize}
-          \item IntelliJ IDEA community versión 2024.2.3 configurado con Java como se lista arriba.
-          \item CLion versión 2024.2.2 con GCC listado arriba.
-          \item Pycharm community versión 2024.2.3 configurado con Python3 listado arriba.
-          \item VS Code versión 1.93.1 configurado únicamente con Python3 y C/C++ listado arriba.
-        \end{itemize}
-  \item Cualquiera de los siguientes navegadores web:
-        \begin{itemize}
-          \item Firefox.
-          \item Google Chrome.
-          \item Microsoft Edge.
-        \end{itemize}
-\end{itemize}
-
-
-Los equipos estarán vigilados por una o varias personas que se encuentren en la sala de cómputo, esto con el fin de asegurarse que no utilicen ayuda externa; celulares, internet, LLMs, entre otras herramientas que no sean las que se listaron anteriormente.
-
-Por último, se desea poder crear una red sin salida a internet en la que se puedan conectar los computadores y se pueda exponer la dirección en la que está desplegada el aplicativo DOMjudge.
-
-
-\section{Análisis de requerimientos}
-
-\subsection{Flujo de trabajo general}
-
-\subsection{Inscripción a la competencia}
 
 \subsection{Aceptación de equipos}
 
@@ -336,9 +312,6 @@ Por último, se desea poder crear una red sin salida a internet en la que se pue
 \addcontentsline{toc}{section}{Referencias}
 \bibliographystyle{ieeetr}
 \bibliography{referencias}
-
-
-
 
 \newpage
 
