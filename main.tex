@@ -26,6 +26,7 @@
 \usepackage{xurl}
 \usepackage{pdfpages}
 \usepackage{pgfgantt}
+\usepackage{enumitem}
 
 \colorlet{LightGray}{White!90!Periwinkle}
 \colorlet{LightOrange}{Orange!15}
@@ -287,6 +288,120 @@ Si hay posibilidad de poder volver a repetir el evento, la etapa de \textbf{Elab
 La actividad que se termina ofreciendo es una maratón de programación competitiva para Tadeístas. Se despliega con infraestructura de la universidad y con el aplicativo DOMjudge. Se cubre todo el desarrollo de la actividad; despliegue, elaboración de problemas, divulgación, convocatoria, y análisis de resultados. En el presente documento se muestra la propuesta completa para poder realizar esta actividad y también que pueda ser llevada como un evento semestral Tadeísta.
 
 \section{Herramientas tecnológicas}
+
+Se va a utilizar como referencia el documento de ``UTADEO - Ficha técnica servidores'' que se encuentra en la sección \ref{sec:anexos} de anexos. Este documento contiene las específicaciones técnicas de los equipos que se encuentran en el laboratorio de redes, el documento (según la \textit{metadata}) es de la fecha 4 de junio de 2025, tener en cuenta que pueden haber actualizaciones debido a las fechas de redacción.\footnote{ Si desea verificar la fecha que se afirma en este documento, puede visitar el repositorio de \textit{GitHub} del documento \href{https://github.com/SegmentationFaultUtadeo/PropuestaMaratonUtadeo/blob/main/Bibliografia/FichaTecnica.pdf}{\textbf{aquí}}, descargar el pdf e inspeccionar la \textit{metadata} del documento (comando \texttt{exiftool}\cite{exiftool}).} A su vez, se toma en cuenta los equipos y espacios que cuenta actualmente la universidad.
+
+
+\subsection{Elementos a considerar}
+
+Para los equipos del laboratorio de redes se va realiza la solicitud tomando en cuenta la documentación oficial del aplicativo DOMjudge\cite{domjudge-docs}.
+
+\begin{itemize}
+  \item En primer lugar, se necesita del equipo Hewlett Packard Enterprise STNS 2154 debido a las especificaciones de la máquina y a que cuenta con un sistema operativo Ubuntu Server 20.04. Se requiere de este equipo debido a la participación de múltiples usuarios conectados al mismo tiempo, por lo tanto, el hardware del equipo es perfecto para esto. Además, en la documentación del aplicativo se recomienda tener un equipo GNU/Linux preferiblemente Debian o alguno de sus derivados, en este caso, Ubuntu.
+  \item Para este equipo se requiere de abrir los puertos \(80\) y \(3306\). Esto para permitir el tráfico HTTP y el de la base de datos MariaDB. Según el documento anexo estos puertos se encuentran actualmente cerrados.
+  \item Se va a realizar la instalación (si es necesaria) de los compiladores de los lenguajes de programación; Java 17\cite{oracle-java} o 21, GCC\cite{gcc} (para C/C++) y el interprete de Python\cite{python-downloads}. Estos son los lenguajes que van a estar disponible para los equipos, por lo tanto, se necesita de sus compiladores.
+\end{itemize}
+
+Los computadores que van a utilizar los equipos serán los del módulo 2 y 7A. Para los equipos se requiere:
+
+\begin{itemize}
+  \item Los equipos deben organizarse de una manera similar a la que se encuentra en la figura \ref{fig:sala-equipos}, cada equipo va a estar al frente de 3 computadores de los cuales únicamente el del medio debe estar prendido, los otros deben permanecer apagados durante la competencia. Si por algún motivo, el computador asignado no funciona, entonces se puede cambiar a los otros dos disponibles. Los voluntarios que ayuden a la organización del evento se encargarán de vigilar que solo se utilice uno de los computadores por equipo, de lo contrario, los estudiantes participantes serán descalificados.
+
+        \begin{figure}[h]
+          \centering
+          \includegraphics[width=\textwidth]{Assets/Equipos.png}
+          \caption{Ejemplo de la organización de equipos en un salón de cómputo }
+          \label{fig:sala-equipos}
+        \end{figure}
+  \item Tener los lenguajes de programación: Java 17 o 21, C/C++ compilador GCC versión 13.2, Python versión \(>=\) 3.9.
+  \item IDEs:
+        \begin{itemize}
+          \item Eclipse versión 4.33.0 configurado con:
+                \begin{itemize}
+                  \item Java Development Tooling JDT versión 3.19.600.v20240903-0240 y que use el Java que está listado arriba.
+                  \item C++ Development Tooling CDT versión 11.0.0 usando C++ mencionado arriba.
+                  \item PyDev Python Development Tooling version 10.0.2 usando Python3 listado arriba.
+                \end{itemize}
+          \item IntelliJ IDEA community versión 2024.2.3 configurado con Java como se lista arriba.
+          \item CLion versión 2024.2.2 con GCC listado arriba.
+          \item Pycharm community versión 2024.2.3 configurado con Python3 listado arriba.
+          \item VS Code versión 1.93.1 configurado únicamente con Python3 y C/C++ listado arriba.
+        \end{itemize}
+  \item Cualquiera de los siguientes navegadores web:
+        \begin{itemize}
+          \item Firefox.
+          \item Google Chrome.
+          \item Microsoft Edge.
+        \end{itemize}
+\end{itemize}
+
+
+Los equipos estarán vigilados por una o varias personas que se encuentren en la sala de cómputo, esto con el fin de asegurarse que no utilicen ayuda externa; celulares, internet, LLMs, entre otras herramientas que no sean las que se listaron anteriormente.
+
+Por último, se desea poder crear una red sin salida a internet en la que se puedan conectar los computadores y se pueda exponer la dirección en la que está desplegada el aplicativo DOMjudge.
+
+
+\section{Análisis de requerimientos}
+
+\subsection{Flujo de trabajo general}
+
+
+\subsection{Inscripción a la competencia}
+
+La inscripción va a ser para los voluntarios como para los equipos. En el caso de las personas que quieran ser ayudantes del evento, se diligencia un formulario individual. Para el caso de la inscripción de equipos se llenará un solo formulario por grupo.\footnote{ Se recomienda utilizar una instancia local de LimeSurvey\cite{limesurvey} para tener dominio de los datos y no depender de servicios de terceros.}
+
+Los campos mínimos necesarios a incluir en la inscripción de los equipos son:
+
+\begin{itemize}
+  \item \textbf{Nombre del equipo:} Título que llevará el equipo en la competencia. Sin lenguaje ofensivo o inadecuado.
+  \item \textbf{Información de cada integrante (x3):}
+        \begin{itemize}
+          \item \textbf{Nombre completo:} Nombres y apellidos.
+          \item \textbf{Correo institucional:} Con dirección \texttt{@utadeo.edu.co}
+          \item \textbf{Tipo de documento:} T.I, C.C, Pasaporte.
+          \item \textbf{Número de documento:} NUIP del estudiante.
+          \item \textbf{Programa académico:} Carrera de pregrado que está cursando el estudiante. Si es estudiante de doble carrera colocar la principal.
+          \item \textbf{Semestre actual:} Semestre en el que se encuentra matriculado el estudiante.
+          \item \textbf{¿Ha participado en competencias de programación competitiva?} Pregunta de sí o no.
+        \end{itemize}
+  \item \textbf{Comentarios adicionales:} Dudas, sugerencias o solicitudes del equipo.
+  \item \textbf{Aceptación de términos y condiciones:} Pregunta de sí o no. Adjuntar las reglas de la competencia, uso de datos personales, comportamiento adecuado, etc.
+\end{itemize}
+
+
+Para aquellos individuos interesados en ser parte del equipo de voluntariado se deben llenar estos campos mínimos:
+
+\begin{itemize}
+  \item \textbf{Nombre completo:} Nombres y apellidos.
+  \item \textbf{Correo electrónico:} Puede ser de cualquier dominio sin importar si es directamente afiliado a la universidad.
+  \item \textbf{Número de contacto:} Número de celular, WhatsApp o cualquier otra red que sea de fácil interacción con el interesado.
+  \item \textbf{¿Qué vínculo posee con la Universidad Jorge Tadeo Lozano?}
+        \begin{itemize}[label=$\square$]
+          \item  Estudiante actual.
+          \item  Egresado/a.
+          \item  Docente / Administrativo.
+          \item  Externo/a.
+          \item  Otro (especificar).
+        \end{itemize}
+  \item \textbf{Disponibilidad para (fecha del evento):} El interesado deberá marcar si está disponible para esa fecha o si puede durante un período de tiempo.
+  \item \textbf{Confirmación para una reunión de inducción (virtual o presencial):} El interesado debe marcar si puede participar en un encuentro para explicar qué funciones se van a llevar durante el evento y para repartir roles.
+  \item \textbf{Funciones que le gustaría colaborar:} Se pueden marcar más de una
+        \begin{itemize}[label=$\square$]
+          \item Registro de participantes.
+          \item Apoyo logístico general (sillas, señalización, ubicaciones).
+          \item Monitoreo de salas durante la competencia.
+          \item Soporte técnico básico (conectividad, hardware).
+          \item Glober@ (entregar globos a los equipos que resuelvan problemas).
+          \item Cualquiera, donde se necesite.
+        \end{itemize}
+  \item \textbf{Compromiso:} El interesado acepta participar como voluntario y se compromete a cumplir con las tareas asignadas.
+  \item \textbf{Comentarios adicionales:} Dudas, sugerencias o solicitudes del interesado.
+\end{itemize}
+
+
+Los formularios deben estar en todo momento cuando se esté en la fase de convocatoria y divulgación. Preferiblemente crear un grupo con todos los voluntarios para facilitar la comunicación entre todos los interesados.
+
+
 
 
 \subsection{Aceptación de equipos}
