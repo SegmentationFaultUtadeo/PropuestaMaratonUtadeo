@@ -1,1 +1,1 @@
-# Propuesta para la mapatón local de la Universidad Jorge Tadeo Lozano
+# Propuesta para la maratón local de la Universidad Jorge Tadeo Lozano
