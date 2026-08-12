@@ -29,15 +29,16 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage{mwe}
 \usepackage[spanish]{babel}
+\usepackage{lastpage}
 
 % --------------------------------------------------
 % Page layout
 % --------------------------------------------------
 \geometry{
-    top=2.0cm,
-    bottom=2.0cm,
-    left=2.0cm,
-    right=2.0cm
+  top=2.0cm,
+  bottom=2.0cm,
+  left=2.0cm,
+  right=2.0cm
 }
 
 \setlength{\parindent}{0pt}
@@ -58,42 +59,42 @@
 % Problem formatting
 % --------------------------------------------------
 \newcommand{\problem}[2]{
-    \clearpage
+  \clearpage
 
-    \section*{Problem #1 -- #2}
+  \section*{Problem #1 -- #2}
 
-    \addcontentsline{toc}{section}{Problem #1 -- #2}
+  \addcontentsline{toc}{section}{Problem #1 -- #2}
 }
 
 \newcommand{\inputsection}{
-    \subsection*{Entrada}
+  \subsection*{Entrada}
 }
 
 \newcommand{\outputsection}{
-    \subsection*{Salida}
+  \subsection*{Salida}
 }
 
 \newcommand{\samples}{
-    \subsection*{Sample input}
+  \subsection*{Sample input}
 }
 
 \newcommand{\sampleoutput}{
-    \subsection*{Sample output}
+  \subsection*{Sample output}
 }
 
 \newcommand{\explanation}{
-    \subsection*{Explicación}
+  \subsection*{Explicación}
 }
 
 % --------------------------------------------------
 % Sample I/O
 % --------------------------------------------------
 \lstset{
-    basicstyle=\ttfamily\small,
-    columns=fullflexible,
-    frame=single,
-    breaklines=true,
-    showstringspaces=false
+  basicstyle=\ttfamily\small,
+  columns=fullflexible,
+  frame=single,
+  breaklines=true,
+  showstringspaces=false
 }
 
 
@@ -122,36 +123,36 @@
 
 \begin{titlepage}
 
-\centering
+  \centering
 
-\vspace*{2cm}
+  \vspace*{2cm}
 
-{\Large\bfseries Competencia de Programación - Estructuras de Datos\par}
+  {\Large\bfseries Competencia de Programación - Estructuras de Datos\par}
 
-\vspace{0.5cm}
+  \vspace{0.5cm}
 
-{\Huge\bfseries 2026-2S\par}
+  {\Huge\bfseries 2026-2S\par}
 
-\vspace{1.5cm}
+  \vspace{1.5cm}
 
-{\Large Este set de problemas tiene 4 problemas, ennumerados de la página 1 a la \textbf{n}\par}
+  {\Large Este set de problemas tiene 4 problemas, ennumerados de la página 1 a la \pageref{last-page}\par}
 
-\vspace{0.5cm}
+  \vspace{0.5cm}
 
-{\large \today\par}
+  {\large \today\par}
 
-\vfill
+  \vfill
 
-{\large
-Facultad de Ciencias Naturales e Ingeniería\\
-Universidad Jorge Tadeo Lozano
-\par}
+  {\large
+    Facultad de Ciencias Naturales e Ingeniería\\
+    Universidad Jorge Tadeo Lozano
+    \par}
 
-\vspace{1cm}
+  \vspace{1cm}
 
-{\large
-Todos los problemas son de autoría por Ludwig Alvarado o adaptados de \url{https://codeforces.com}
-\par}
+  {\large
+    Todos los problemas son de autoría por Ludwig Alvarado o adaptados de \url{https://codeforces.com}
+    \par}
 
 \end{titlepage}
 
@@ -162,99 +163,49 @@ Todos los problemas son de autoría por Ludwig Alvarado o adaptados de \url{http
 
 \section*{Información General}
 
-Salvo que se indique lo contrario, las siguientes condiciones se aplican a todos los problemas.
-
-\subsection*{Nombre del Programa}
-
-Su solución debe enviarse utilizando el nombre de archivo especificado por
-la plataforma del concurso.
+Salvo que se indique lo contrario, las siguientes condiciones aplican a todos los problemas.
 
 \subsection*{Entrada}
 
 \begin{enumerate}[leftmargin=*]
-    \item La entrada debe leerse desde la entrada estándar.
-    \item La entrada consta de un único caso de prueba.
-    \item Los valores que se encuentren en la misma línea están separados por espacios.
-    \item No hay datos adicionales en la entrada.
+  \item La entrada se lee desde la entrada estándar.
+  \item Existe múltiples casos de prueba.
+  \item Los valores de una misma línea están separados por espacios.
+  \item No hay datos adicionales en la entrada.
 \end{enumerate}
 
 \subsection*{Salida}
 
 \begin{enumerate}[leftmargin=*]
-    \item La salida debe escribirse en la salida estándar.
-    \item El resultado debe imprimirse exactamente como se especifica.
-    \item No debe aparecer ninguna salida adicional.
+  \item La salida se escribe en la salida estándar.
+  \item Debe imprimirse exactamente el resultado solicitado, sin información adicional.
 \end{enumerate}
 
-\subsection*{Normas y Código de Honor}
 
-La sesión tendrá una duración de \textbf{1 hora y 30 minutos} y se realizará en grupos de \textbf{máximo tres (3) personas}. Cada grupo deberá trabajar de manera colaborativa y respetar las siguientes normas durante toda la sesión.
-
-\subsubsection*{Material y herramientas permitidas}
+\subsection*{Material y herramientas permitidas}
 
 \begin{enumerate}[leftmargin=*]
-    \item Se permite únicamente el uso de material de consulta \textbf{impreso}, como libros, apuntes, hojas de referencia o documentación impresa.
-    
-    \item También se permite consultar exclusivamente las siguientes páginas oficiales de documentación:
-    \begin{itemize}
-        \item Python: \url{https://docs.python.org/}
-        \item Java: \url{https://docs.oracle.com/en/java/}
-        \item C/C++: \url{https://cppreference.net/}
-    \end{itemize}
-    
-    \item \textbf{No está permitido consultar ninguna otra página web}, incluyendo buscadores, foros, blogs, repositorios de código, sitios de preguntas y respuestas o páginas con soluciones a problemas de programación.
-    
-    \item No está permitido utilizar teléfonos celulares, relojes inteligentes, audífonos, tabletas u otros dispositivos electrónicos personales. Estos deberán permanecer \textbf{guardados en la maleta durante toda la sesión}.
-    
-    \item No está permitido utilizar herramientas basadas en \textbf{modelos de lenguaje (LLM)}, asistentes de inteligencia artificial o cualquier otra herramienta de generación automática de código, incluyendo, entre otras, ChatGPT, GitHub Copilot, Gemini, Claude o herramientas equivalentes.
-    
-    \item El único entorno de desarrollo (IDE) permitido durante la prueba será \textbf{USACO Guide IDE}, disponible en \url{https://ide.usaco.guide/}.
-    
-    \item Los lenguajes de programación permitidos serán \textbf{C/C++, Java y Python}.
-    
-    \item No se permite utilizar otros IDE, editores de código, compiladores, intérpretes o herramientas de desarrollo diferentes a las proporcionadas por el entorno autorizado.
+  \item Se permite utilizar únicamente material de consulta \textbf{impreso}, como libros, apuntes y hojas de referencia.
+  \item También se permite consultar exclusivamente:
+        \begin{itemize}
+          \item Python: \url{https://docs.python.org/}
+          \item Java: \url{https://docs.oracle.com/en/java/}
+          \item C/C++: \url{https://cppreference.net/}
+        \end{itemize}
+  \item No está permitido consultar ninguna otra página web, utilizar buscadores, foros, blogs, repositorios, sitios de soluciones ni fuentes externas.
+  \item No se permite el uso de celulares, relojes inteligentes, audífonos, tabletas u otros dispositivos personales. Estos deberán permanecer \textbf{guardados en la maleta durante toda la sesión}.
+  \item Está prohibido utilizar LLM, asistentes de inteligencia artificial o herramientas de generación automática de código, incluyendo ChatGPT, GitHub Copilot, Gemini, Claude o equivalentes.
+  \item El único IDE permitido es \textbf{USACO Guide IDE}, disponible en \url{https://ide.usaco.guide/}. Los lenguajes permitidos son \textbf{C/C++, Java y Python}.
 \end{enumerate}
 
 \subsubsection*{Comunicación y colaboración}
 
 \begin{enumerate}[leftmargin=*]
-\item Los integrantes de cada grupo pueden discutir libremente los problemas, diseñar algoritmos, revisar código y tomar decisiones de manera conjunta.
-\item Está prohibido recibir o proporcionar ayuda a personas que pertenezcan a otros grupos.
-\item No está permitido compartir código, soluciones, algoritmos o fragmentos de código con otros grupos.
-\item Las consultas al profesor estarán limitadas exclusivamente a preguntas relacionadas con \textbf{la forma de leer o interpretar los datos de entrada}. El profesor no proporcionará pistas sobre el algoritmo, la estrategia de solución, la complejidad esperada ni la respuesta de los problemas.
-\item No está permitido solicitar al profesor que revise, corrija o valide una solución o un algoritmo.
+  \item Los integrantes del grupo pueden discutir problemas, diseñar algoritmos, revisar código y tomar decisiones conjuntamente.
+  \item Está prohibido recibir o proporcionar ayuda a otros grupos, así como compartir código, algoritmos, soluciones o fragmentos de código.
+  \item Las consultas al profesor se limitarán a dudas sobre la \textbf{lectura o interpretación de los datos de entrada}. No se proporcionarán pistas sobre algoritmos, estrategias, complejidad o soluciones, ni se revisarán o validarán códigos.
+  \item No está permitido comunicarse con personas externas al grupo para obtener ayuda, ni observar o copiar información de otros grupos.
 \end{enumerate}
-
-\subsubsection*{Código de Honor}
-
-Al participar en esta prueba, cada integrante se compromete a:
-
-\begin{enumerate}[leftmargin=*]
-\item Resolver los problemas de manera honesta y utilizando únicamente los recursos permitidos.
-\item No utilizar herramientas de inteligencia artificial, LLM, búsquedas en Internet, soluciones de terceros ni código obtenido de fuentes externas durante la sesión.
-\item No comunicarse con personas externas al grupo para obtener ayuda relacionada con la prueba.
-\item No observar, copiar o intentar obtener información de las soluciones o pantallas de otros grupos.
-\item No compartir información sobre los problemas o sus soluciones con otros grupos durante la sesión.
-\item Informar al profesor si se presenta alguna situación que pueda comprometer la integridad de la prueba.
-\end{enumerate}
-
-\subsubsection*{Condiciones de la sesión}
-
-\begin{enumerate}[leftmargin=*]
-\item El tiempo total disponible será de \textbf{90 minutos}. El tiempo comenzará cuando el profesor indique el inicio de la prueba y finalizará cuando se anuncie el término de la sesión.
-\item Una vez finalizado el tiempo, ningún grupo podrá continuar modificando o ejecutando sus soluciones.
-\item Cada grupo estará conformado por \textbf{máximo tres (3) integrantes}. No se permitirá la incorporación de nuevos integrantes una vez iniciada la prueba.
-\item Cada grupo será responsable de administrar su tiempo y distribuir las tareas entre sus integrantes.
-\item Los participantes deberán permanecer en el espacio asignado durante la prueba, salvo que el profesor autorice lo contrario.
-\item Cualquier situación no contemplada explícitamente en estas normas será resuelta por el profesor, procurando preservar la igualdad de condiciones entre todos los grupos.
-\end{enumerate}
-
-\subsubsection*{Compromiso}
-
-La participación en la prueba implica la aceptación de estas normas. Cualquier incumplimiento podrá resultar en la \textbf{anulación de la participación del grupo}, de acuerdo con la gravedad de la situación y la decisión del profesor. Además de ser reportado el caso al comité de convivencia de la facultad.
-
-Al participar, los integrantes declaran que conocen y aceptan estas condiciones y se comprometen a mantener una conducta íntegra, respetuosa y colaborativa durante toda la sesión.
-
 
 
 % ==================================================
@@ -264,6 +215,7 @@ Al participar, los integrantes declaran que conocen y aceptan estas condiciones 
 
 
 \problem{A}{Sandía}
+{\vspace{-0.5cm} \scriptsize (Original en Codeforces: Watermelon)}
 
 \pagenumbering{arabic}
 En un caluroso día de verano, Pete y su amigo Billy decidieron comprar una sandía. En su opinión, eligieron la más grande y madura. Después de eso, pesaron la sandía y la báscula indicó que pesaba $w$ kilogramos. Regresaron corriendo a casa, muertos de sed, y decidieron dividir la sandía. Sin embargo, se enfrentaron a un problema difícil.
@@ -282,11 +234,11 @@ La primera y única línea de entrada contiene un número entero $w$
 Imprime \texttt{YES} si los niños pueden dividir la sandía en dos partes, cada una con un peso par de kilogramos. En caso contrario, imprime \texttt{NO}.
 
 \begin{sample}{1}{}
-\texttt{8}
+  \texttt{8}
 
-&
+  &
 
-\texttt{YES}
+  \texttt{YES}
 \end{sample}
 
 \explanation
@@ -329,21 +281,21 @@ Lo que tu programa debe hacer es imprimir un número entero, la cantidad de fila
 
 
 \begin{sample}{1}{}
-\texttt{3}
-&
-\texttt{2}
+  \texttt{3}
+  &
+  \texttt{2}
 \end{sample}
 
 \begin{sample}{2}{}
-\texttt{6}
-&
-\texttt{3}
+  \texttt{6}
+  &
+  \texttt{3}
 \end{sample}
 
 \begin{sample}{3}{}
-\texttt{4}
-&
-\texttt{2}
+  \texttt{4}
+  &
+  \texttt{2}
 \end{sample}
 
 \explanation
@@ -443,33 +395,33 @@ Debes imprimir dos números enteros: primero, la cantidad de números pares de l
 Los dos números deben estar separados por un espacio.
 
 \begin{sample}{1}{}
-\texttt{5}
+  \texttt{5}
 
-\texttt{1 2 3 4 5}
+  \texttt{1 2 3 4 5}
 
-&
+  &
 
-\texttt{2 3}
+  \texttt{2 3}
 \end{sample}
 
 \begin{sample}{2}{}
-\texttt{8}
+  \texttt{8}
 
-\texttt{10 7 4 9 12 15 20 21}
+  \texttt{10 7 4 9 12 15 20 21}
 
-&
+  &
 
-\texttt{4 4}
+  \texttt{4 4}
 \end{sample}
 
 \begin{sample}{3}{}
-\texttt{6}
+  \texttt{6}
 
-\texttt{-2 -5 0 8 11 13}
+  \texttt{-2 -5 0 8 11 13}
 
-&
+  &
 
-\texttt{3 3}
+  \texttt{3 3}
 \end{sample}
 
 \explanation
@@ -481,7 +433,7 @@ En la segunda prueba hay cuatro números pares: $10$, $4$, $12$ y $20$. Los cuat
 En la tercera prueba, los números pares son $-2$, $0$ y $8$, mientras que $-5$, $11$ y $13$ son impares. Por lo tanto, la respuesta es \texttt{3 3}.
 
 
-
+\label{last-page}
 
 
 \end{document}
