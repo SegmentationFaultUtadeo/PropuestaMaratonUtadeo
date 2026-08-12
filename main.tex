@@ -81,7 +81,7 @@
 }
 \date{}
 \author{\textbf{Alvarado Becerra Ludwig} \\
-	\today}
+	\today }
 
 \maketitle
 \thispagestyle{empty}
@@ -164,7 +164,7 @@ Además, la maratón propuesta trasciende lo meramente académico al insertarse 
 En términos generales, esta actividad se trata de que el semillero de programación competitiva y el colectivo de software libre GNUTADEO, organicen y dirijan una competencia de programación competitiva en la universidad utilizando infraestructura del laboratorio de redes y el aplicativo DOMjudge\cite{domjudge-docs}, mismo que utilizan en las competencias del ICPC\cite{domjudge-about}. En este documento se presenta la documentación técnica de cómo se realizará el evento, la infraestructura que se necesitará y toda la metodología empleada.
 
 
-La fase inicial será de configuración del aplicativo en el servidor de la universidad hecho principalmente por los estudiantes Ludwig Alvarado y Juan José Martínez, miembros del colectivo de sotware libre GNUTADEO. En esta etapa se configura todo el software para que pueda ser llevado el evento; \textit{pullear} las imágenes de Docker\cite{domjudge-judgehost,domjudge-domserver}, configuración del usuario administrador, jurado, equipos, usuarios y \textit{globero}\footnote{Equipo que reparte los globos a los equipos participantes en la competencia que resuelvan problemas}.
+La fase inicial será de configuración del aplicativo en el servidor de la universidad hecho principalmente por los estudiantes Ludwig Alvarado y Juan José Martínez, miembros del colectivo de sotware libre GNUTADEO. En esta etapa se configura todo el software para que pueda ser llevado el evento; \textit{pullear} las imágenes de Docker\cite{domjudge-judgehost,domjudge-domserver,debian_docker}, configuración del usuario administrador, jurado, equipos, usuarios y \textit{globero}\footnote{Equipo que reparte los globos a los equipos participantes en la competencia que resuelvan problemas}.
 
 
 A la par que se desarrolla la fase de infraestructura, el semillero de programación competitiva a cargo del profesor José Alejandro Franco Calderón prepararán un conjunto de problemas a resolver durante la competición. Estos problemas van a estar divididos de manera general en dos temáticas; técnicos o algorítmicos prácticos, donde se tengan entradas y salidas bien definidas y donde el enfoque es la implementación directa de estructuras de datos y algoritmos clásicos\footnote{Tenga como ejemplo la plataforma \url{www.leetcode.com}\cite{leetcode} en el que los problemas son muy directos, e.j, ``Invierta una lista enlazada''}; competencia algorítmica o de pensamiento lógico-algorítmico, en estos problemas se introduce un componente narrativo o con mucho contexto y se requiere identificar qué estructuras de datos y algoritmos utilizar, los tipos de soluciones deben ser más creativas y estratégicas\footnote{El ICPC es un buen ejemplo de los problemas, otras plataformas pueden ser: \url{ https://codeforces.com/ }, \url{https://onlinejudge.org/} y \url{https://open.kattis.com/}. }.
@@ -406,7 +406,20 @@ Los formularios deben estar en todo momento cuando se esté en la fase de convoc
 
 \subsection{Aceptación de equipos}
 
+Las normas para confirmar a los equipos en la competencia son simples y sencillas, se deben cumplir todas a continuación:
+
+\begin{enumerate}
+  \item El nombre del equipo no debe tener vulgaridades, insultos o cualquier forma de lenguaje soez.
+  \item Los 3 miembros del equipo deben ser estudiantes (de cualquier carrera y semestre) matriculados en la universidad.
+  \item Los datos proporcionados deben ser los correspondientes (correo, teléfono, tipo de documento\footnote{Para verificar el documento se pide el favor a la universidad ya que ellos poseen esos datos}).
+\end{enumerate}
+
+
 \subsection{Creación de equipos}
+
+Todo lo que sigue se puede encontrar en \url{https://www.domjudge.org/docs/manual/8.2/config-basic.html}
+
+
 
 \subsection{Ejecución de la actividad}
 
